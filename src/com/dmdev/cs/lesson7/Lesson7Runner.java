@@ -1,3 +1,5 @@
+package com.dmdev.cs.lesson7;
+
 public class Lesson7Runner {
 
     public static void main(String[] args) {
