@@ -28,6 +28,7 @@ public class Lesson14Runner {
                 break;
             default:
                 System.out.println("Month is invalid");
+                break;
         }
     }
 }
