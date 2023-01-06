@@ -11,13 +11,20 @@ package com.dmdev.cs.lesson16;
  */
 public class Task4 {
 
+//    [modifiers] return_value nameVerb([param])
     public static void main(String[] args) {
-        int year = 2000;
-        if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
-            System.out.println(year + " високосный");
-        } else {
-            System.out.println(year + " не високосный");
-        }
+        int year = 1900;
+//        boolean result = isLeapYear(year);
+        System.out.println("Високосный: " + isLeapYear(year));
+    }
+
+    public static boolean isLeapYear(int year) {
+        return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+//        if (result) {
+//            return true;
+//        } else {
+//            return false;
+//        }
     }
 }
 
