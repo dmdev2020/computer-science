@@ -12,6 +12,20 @@ public class Task5 {
         System.out.println("Sum: " + sum2(values)); // 0
     }
 
+    public static int sum(int[] values) {
+        int result = 0;
+        int minIndex = Task4.getMinIndex(values);
+        int maxIndex = Task4.getMaxIndex(values);
+//        int startIndex = minIndex < maxIndex ? minIndex : maxIndex;
+        int startIndex = Math.min(minIndex, maxIndex);
+        int endIndex = Math.max(minIndex, maxIndex);
+        for (int i = startIndex + 1; i < endIndex; i++) {
+            result += values[i];
+        }
+
+        return result;
+    }
+
     public static int sum2(int[] values) {
         int result = 0;
         int startIndex = Task4.getMinIndex(values);
@@ -21,20 +35,6 @@ public class Task5 {
             endIndex = startIndex;
             startIndex = temp;
         }
-        for (int i = startIndex + 1; i < endIndex; i++) {
-            result += values[i];
-        }
-
-        return result;
-    }
-
-    public static int sum(int[] values) {
-        int result = 0;
-        int minIndex = Task4.getMinIndex(values);
-        int maxIndex = Task4.getMaxIndex(values);
-//        int startIndex = minIndex < maxIndex ? minIndex : maxIndex;
-        int startIndex = Math.min(minIndex, maxIndex);
-        int endIndex = Math.max(minIndex, maxIndex);
         for (int i = startIndex + 1; i < endIndex; i++) {
             result += values[i];
         }
